@@ -2,15 +2,16 @@
   box-sizing: border-box;
 }
 
+/* base */
 body {
   margin: 0;
-  min-height: 100vh;
   background: #0a0a0a;
   color: #f2f2f2;
-  font-family: "MS Gothic", "Courier New", monospace;
+  font-family: 'Yomogi', cursive;
 }
 
-/* layout */
+/* ========== HOME / INDEX ========== */
+
 .container {
   min-height: 100vh;
   display: flex;
@@ -21,7 +22,6 @@ body {
   text-align: center;
 }
 
-/* text */
 .title {
   font-size: 2.4rem;
   letter-spacing: 0.15em;
@@ -33,14 +33,11 @@ body {
   letter-spacing: 0.12em;
 }
 
-/* links */
-.projects,
-.chapters {
+.projects {
   margin-top: 2rem;
 }
 
-.project-link,
-.chapter-link {
+.project-link {
   display: inline-block;
   padding: 10px 20px;
   border: 1px solid #f2f2f2;
@@ -48,23 +45,53 @@ body {
   text-decoration: none;
   font-size: 0.8rem;
   letter-spacing: 0.12em;
-  transition: all 0.2s ease;
+  transition: all 0.25s ease;
 }
 
-.project-link:hover,
-.chapter-link:hover {
+.project-link:hover {
   background: #f2f2f2;
   color: #0a0a0a;
 }
 
-/* back link */
-.back {
-  margin-top: 2.5rem;
-  font-size: 0.7rem;
-  color: #bdbdbd;
-  text-decoration: none;
+/* ========== READER / CROW’S NEST ========== */
+
+.reader-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(10, 10, 10, 0.9);
+  border-bottom: 1px solid #222;
+  padding: 10px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
 }
 
-.back:hover {
-  text-decoration: underline;
+.back-btn {
+  color: #f2f2f2;
+  text-decoration: none;
+  padding: 4px 12px;
+  border-radius: 999px;
+  border: 1px solid #f2f2f2;
+  transition: background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.back-btn:hover {
+  background: #f2f2f2;
+  color: #0a0a0a;
+  box-shadow: 0 0 8px rgba(255,255,255,0.85);
+}
+
+.reader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reader img {
+  width: 100%;
+  max-width: 760px;
+  display: block;
+  margin: 0;
 }
